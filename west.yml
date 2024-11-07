@@ -6,13 +6,13 @@ manifest:
     west-commands: scripts/west-commands.yml
 
   remotes:
-    - name: zephyrproject-rtos
-      url-base: https://github.com/zephyrproject-rtos
+    - name: phytec
+      url-base: https://github.com/phytec
 
   projects:
-    - name: zephyr
-      remote: zephyrproject-rtos
-      revision: main
+    - name: zephyr-phytec
+      remote: phytec
+      revision: v4.0.0-phy1
       import:
         # By using name-allowlist we can clone only the modules that are
         # strictly needed by the application.
