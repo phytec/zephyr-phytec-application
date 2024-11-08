@@ -3,14 +3,15 @@
 # so that you can easily test all of them locally or in CI.
 sample:
   description: Example application
-  name: example-application 
+  name: example-application
 common:
   build_only: true
   integration_platforms:
-    - custom_plank
-    - nucleo_f302r8
+    - phycore_rt1170/mimxrt1176/cm7
+    - phycore_rt1170/mimxrt1176/cm4
 tests:
   app.default: {}
   app.debug:
     extra_overlay_confs:
       - debug.conf
+      - shell.conf
