@@ -1,0 +1,10 @@
+# SPDX-License-Identifier: Apache-2.0
+
+add_subdirectory_ifdef(CONFIG_APP_WATCHDOG init/watchdog)
+
+add_subdirectory_ifdef(CONFIG_APP_AUDIO_SELCALL modules/audio_selcall)
+add_subdirectory_ifdef(CONFIG_APP_BUTTON modules/button)
+add_subdirectory_ifdef(CONFIG_APP_DAC_SAWTOOTH modules/dac_sawtooth)
+add_subdirectory_ifdef(CONFIG_APP_HEARTBEAT modules/heartbeat)
+add_subdirectory_ifdef(CONFIG_APP_UPTIME_COUNTER modules/uptime_counter)
+add_subdirectory_ifdef(CONFIG_APP_USB_DEVICE modules/usb_device)

@@ -1,0 +1,66 @@
+# Copyright (c) 2025 PHYTEC
+# SPDX-License-Identifier: Apache-2.0
+#
+
+menu "PHYTEC Testing Options"
+
+config PHYTEC_SOM_TESTING
+	bool "Modify application for SOM testing."
+	default n
+
+config PHYTEC_KIT_TESTING
+	bool "Modify application for kit testing."
+	default n
+
+config PHYTEC_NIGHTLY_TESTING
+	bool "Modify application for nightly testing."
+	default n
+
+endmenu
+
+menu "Example Applications"
+
+config APP_AUDIO_SELCALL
+	bool "Enable the audio selcall example."
+	default y
+	depends on I2C
+	depends on AUDIO_CODEC
+
+config APP_BUTTON
+	bool "Enable the button example."
+	default y
+	depends on GPIO
+	depends on !PHYTEC_KIT_TESTING
+
+config APP_DAC_SAWTOOTH
+	bool "Enable the DAC sawtooth example."
+	default y
+	depends on DAC
+	depends on !PHYTEC_SOM_TESTING
+	depends on !PHYTEC_KIT_TESTING
+	depends on !PHYTEC_NIGHTLY_TESTING
+
+config APP_HEARTBEAT
+	bool "Enable the LED heartbeat example."
+	default y
+	depends on GPIO
+
+config APP_UPTIME_COUNTER
+	bool "Enable the uptime counter example."
+	default y
+	depends on EEPROM
+	depends on !PHYTEC_SOM_TESTING
+	depends on !PHYTEC_KIT_TESTING
+
+config APP_USB_DEVICE
+	bool "Enable the USB device mass storage example."
+	default y
+	depends on USB_DEVICE_STACK_NEXT
+
+config APP_WATCHDOG
+	bool "Initialize the watchdog task"
+	default y
+	select TASK_WDT
+	depends on WATCHDOG
+
+endmenu
