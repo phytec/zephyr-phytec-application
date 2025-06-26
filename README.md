@@ -1,4 +1,4 @@
-# Zephyr Example Application
+# PHYTEC Zephyr Application
 
 <a href="https://github.com/zephyrproject-rtos/example-application/actions/workflows/build.yml?query=branch%3Amain">
   <img src="https://github.com/zephyrproject-rtos/example-application/actions/workflows/build.yml/badge.svg?event=push">
@@ -62,7 +62,7 @@ command:
 
 ```shell
 # initialize my-workspace for the example-application (main branch)
-west init -m https://github.com/zephyrproject-rtos/example-application --mr main my-workspace
+west init -m https://github.com/phytec/zephyr-phytec-application --mr v4.1.0-phy1 my-workspace
 # update Zephyr modules
 cd my-workspace
 west update
@@ -73,13 +73,13 @@ west update
 To build the application, run the following command:
 
 ```shell
-cd example-application
+cd zephyr-phytec-application
 west build -b $BOARD app
 ```
 
 where `$BOARD` is the target board.
 
-You can use the `custom_plank` board found in this
+You can use the `phyboard_atlas/mimxrt1176/cm7 ` board found in this
 repository. Note that Zephyr sample boards may be used if an
 appropriate overlay is provided (see `app/boards`).
 
@@ -87,7 +87,7 @@ A sample debug configuration is also provided. To apply it, run the following
 command:
 
 ```shell
-west build -b $BOARD app -- -DEXTRA_CONF_FILE=debug.conf
+west build -b $BOARD app -- -DEXTRA_CONF_FILE=shell.conf
 ```
 
 Once you have built the application, run the following command to flash it:
