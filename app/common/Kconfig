@@ -40,6 +40,11 @@ config APP_DAC_SAWTOOTH
 	depends on !PHYTEC_KIT_TESTING
 	depends on !PHYTEC_NIGHTLY_TESTING
 
+config APP_EXP_UART
+	bool "Enable Hello World over expansion header example."
+	default y
+	depends on SERIAL
+
 config APP_HEARTBEAT
 	bool "Enable the LED heartbeat example."
 	default y
