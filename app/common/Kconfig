@@ -44,6 +44,15 @@ config APP_HEARTBEAT
 	bool "Enable the LED heartbeat example."
 	default y
 	depends on GPIO
+	depends on !APP_LED_ROLLOVER
+
+config APP_LED_ROLLOVER
+	bool "Enable the LED rollover example using LED subsystem."
+	default n
+	depends on LED
+	help
+		This enables an LED rollover demo that sequentially lights
+		up LEDs using the LED driver subsystem instead of direct GPIO.
 
 config APP_UPTIME_COUNTER
 	bool "Enable the uptime counter example."
