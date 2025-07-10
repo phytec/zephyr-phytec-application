@@ -54,6 +54,31 @@ config APP_LED_ROLLOVER
 		This enables an LED rollover demo that sequentially lights
 		up LEDs using the LED driver subsystem instead of direct GPIO.
 
+config APP_LVGL_RANDOM_NUMBER
+	bool "Enable the LVGL random number example."
+	default y
+	select LVGL
+	select LV_FONT_MONTSERRAT_32
+	select LV_FONT_MONTSERRAT_48
+	depends on DISPLAY
+	depends on PHYTEC_KIT_TESTING
+
+config APP_LVGL_TESTCARD
+	bool "Enable the LVGL test card example."
+	default y
+	select LVGL
+	depends on DISPLAY
+	depends on PHYTEC_SOM_TESTING
+
+config APP_LVGL_WIDGETS
+	bool "Enable the LVGL widgets demo."
+	default y
+	select LVGL
+	select LV_USE_DEMO_WIDGETS
+	depends on DISPLAY
+	depends on !PHYTEC_SOM_TESTING
+	depends on !PHYTEC_KIT_TESTING
+
 config APP_UPTIME_COUNTER
 	bool "Enable the uptime counter example."
 	default y
