@@ -25,12 +25,20 @@ config APP_AUDIO_SELCALL
 	default y
 	depends on I2C
 	depends on AUDIO_CODEC
+	depends on !PHYTEC_SOM_TESTING
 
 config APP_BUTTON
 	bool "Enable the button example."
 	default y
 	depends on GPIO
 	depends on !PHYTEC_KIT_TESTING
+	depends on !PHYTEC_SOM_TESTING
+
+config APP_CAPTURE_TESTPATTERN
+	bool "Enable the capture testcard example."
+	default y
+	depends on VIDEO
+	depends on PHYTEC_SOM_TESTING || PHYTEC_KIT_TESTING
 
 config APP_DAC_SAWTOOTH
 	bool "Enable the DAC sawtooth example."
@@ -45,6 +53,7 @@ config APP_HEARTBEAT
 	default y
 	depends on GPIO
 	depends on !APP_LED_ROLLOVER
+	depends on !PHYTEC_SOM_TESTING
 
 config APP_LED_ROLLOVER
 	bool "Enable the LED rollover example using LED subsystem."

@@ -40,7 +40,7 @@ void lvgl_random_number(void)
 		return;
 	}
 
- 	LV_IMG_DECLARE(img_testcard_rgb);
+	LV_IMG_DECLARE(img_testcard_rgb);
 	image = lv_img_create(lv_scr_act());
 	lv_img_set_src(image, &img_testcard_rgb);
 	lv_obj_align(image, LV_ALIGN_CENTER, 0, 0);
