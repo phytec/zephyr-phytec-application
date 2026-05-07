@@ -16,6 +16,10 @@ config PHYTEC_NIGHTLY_TESTING
 	bool "Modify application for nightly testing."
 	default n
 
+config PHYTEC_CHAMBER_TESTING
+	bool "MOdify application for chamber testing."
+	default n
+
 endmenu
 
 menu "Example Applications"
@@ -31,6 +35,10 @@ config APP_BUTTON
 	default y
 	depends on GPIO
 	depends on !PHYTEC_KIT_TESTING
+
+config APP_CSI_CAPTURE
+	bool "Enable the csi capture example."
+	default n
 
 config APP_DAC_SAWTOOTH
 	bool "Enable the DAC sawtooth example."
@@ -78,6 +86,7 @@ config APP_LVGL_WIDGETS
 	depends on DISPLAY
 	depends on !PHYTEC_SOM_TESTING
 	depends on !PHYTEC_KIT_TESTING
+	depends on !PHYTEC_CHAMBER_TESTING
 
 config APP_UPTIME_COUNTER
 	bool "Enable the uptime counter example."
@@ -85,6 +94,36 @@ config APP_UPTIME_COUNTER
 	depends on EEPROM
 	depends on !PHYTEC_SOM_TESTING
 	depends on !PHYTEC_KIT_TESTING
+
+config VIDEO_BUFFER_POOL_ALIGN
+	int "Alignment of the video pool’s buffer"
+	default 64
+
+config VIDEO_BUFFER_POOL_NUM_MAX
+	int "Number of maximum sized buffer in the video pool"
+	default 2
+
+config VIDEO_FRAME_HEIGHT
+	int "Height of the video frame"
+	default 0
+	help
+		Height of the video frame. If set to 0, the default height is used.
+
+config VIDEO_FRAME_WIDTH
+	int "Width of the video frame"
+	default 0
+	help
+		Width of the video frame. If set to 0, the default width is used.
+
+config VIDEO_PIXEL_FORMAT
+	string "Pixel format of the video frame"
+	help
+		Pixel format of the video frame. If not set, the default pixel format is used.
+
+config VIDEO_CTRL_HFLIP
+	bool "Mirror the video frame horizontally"
+	help
+		If set, mirror the video frame horizontally
 
 config APP_USB_DEVICE
 	bool "Enable the USB device mass storage example."
