@@ -13,7 +13,7 @@ manifest:
     - name: zephyr
       remote: phytec
       repo-path: zephyr-phytec
-      revision: v4.1.0-phynext
+      revision: WIP/jma@phytec.com/chamber_test_image_dev
       import:
         # By using name-allowlist we can clone only the modules that are
         # strictly needed by the application.
