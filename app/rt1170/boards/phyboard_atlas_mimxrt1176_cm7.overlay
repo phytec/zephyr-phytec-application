@@ -12,12 +12,6 @@
 	};
 };
 
-/delete-node/ &zephyr_udc0;
-
-zephyr_udc0: &usb2 {
-	status = "okay";
-};
-
 &zephyr_mipi_dsi {
 	/* Raise the DSI clock frequency */
 	phy-clock = <792000000>;
