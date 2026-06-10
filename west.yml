@@ -19,6 +19,7 @@ manifest:
         # strictly needed by the application.
         name-allowlist:
           - cmsis      # required by the ARM port
+          - cmsis_6
           - hal_nxp    # required by NXP boards
           - lvgl
           - fatfs
