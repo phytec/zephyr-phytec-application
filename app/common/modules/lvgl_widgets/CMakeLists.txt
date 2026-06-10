@@ -12,5 +12,10 @@ target_sources(app PRIVATE
     ${LVGL_DIR}/demos/widgets/assets/img_demo_widgets_avatar.c
     ${LVGL_DIR}/demos/widgets/assets/img_demo_widgets_needle.c
     ${LVGL_DIR}/demos/widgets/assets/img_lvgl_logo.c
+    ${LVGL_DIR}/demos/lv_demos.c    
     ${LVGL_DIR}/demos/widgets/lv_demo_widgets.c
+    ${LVGL_DIR}/demos/widgets/lv_demo_widgets_analytics.c
+    ${LVGL_DIR}/demos/widgets/lv_demo_widgets_components.c
+    ${LVGL_DIR}/demos/widgets/lv_demo_widgets_profile.c
+    ${LVGL_DIR}/demos/widgets/lv_demo_widgets_shop.c
 )
