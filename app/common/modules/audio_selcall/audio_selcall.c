@@ -93,7 +93,7 @@ int init_audio(void)
 	audio_cfg.dai_cfg.i2s.word_size = SAMPLE_BIT_WIDTH;
 	audio_cfg.dai_cfg.i2s.channels =  2;
 	audio_cfg.dai_cfg.i2s.format = I2S_FMT_DATA_FORMAT_I2S;
-	audio_cfg.dai_cfg.i2s.options = I2S_OPT_FRAME_CLK_MASTER;
+	audio_cfg.dai_cfg.i2s.options = I2S_OPT_FRAME_CLK_CONTROLLER;
 	audio_cfg.dai_cfg.i2s.frame_clk_freq = SAMPLE_FREQUENCY;
 	audio_cfg.dai_cfg.i2s.mem_slab = &tx_0_mem_slab;
 	audio_cfg.dai_cfg.i2s.block_size = BLOCK_SIZE;
@@ -118,7 +118,7 @@ int init_audio(void)
 	i2s_cfg.word_size = SAMPLE_BIT_WIDTH;
 	i2s_cfg.channels = NUMBER_OF_CHANNELS;
 	i2s_cfg.format = I2S_FMT_DATA_FORMAT_I2S;
-	i2s_cfg.options = I2S_OPT_BIT_CLK_MASTER | I2S_OPT_FRAME_CLK_MASTER;
+	i2s_cfg.options = I2S_OPT_BIT_CLK_CONTROLLER | I2S_OPT_FRAME_CLK_CONTROLLER;
 	i2s_cfg.frame_clk_freq = SAMPLE_FREQUENCY;
 	i2s_cfg.mem_slab = &tx_0_mem_slab;
 	i2s_cfg.block_size = BLOCK_SIZE;
