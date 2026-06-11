@@ -204,19 +204,19 @@ void audio(void)
 		}
 		ret = play_tone(tone_1393);
 		if (ret < 0) {
-			LOG_INF("Failed to play tone 852");
+			LOG_INF("Failed to play tone 1393");
 		}
 		ret = play_tone(tone_1020);
 		if (ret < 0) {
-			LOG_INF("Failed to play tone 852");
+			LOG_INF("Failed to play tone 1020");
 		}
 		ret = play_tone(tone_2100);
 		if (ret < 0) {
-			LOG_INF("Failed to play tone 852");
+			LOG_INF("Failed to play tone 2100");
 		}
 		ret = play_tone(tone_1153);
 		if (ret < 0) {
-			LOG_INF("Failed to play tone 852");
+			LOG_INF("Failed to play tone 1153");
 		}
 		k_sleep(K_SECONDS(SLEEP_TIME_S));
 	};
