@@ -14,7 +14,8 @@ manifest:
       remote: phytec
       repo-path: zephyr-phytec
 #      revision: WIP/jma@phytec.com/v4.4.0-phynext
-      revision: f7a4352fb43ff289bfa38ebb600b74e973f2008c
+#      revision: f7a4352fb43ff289bfa38ebb600b74e973f2008c
+      revision: 28ae7e8bccbd593ab75890fc86f1e2a8f04f60ed
       import:
         # By using name-allowlist we can clone only the modules that are
         # strictly needed by the application.
