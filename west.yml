@@ -23,7 +23,8 @@ manifest:
 #      revision: 68ad2ab5edc3d23be9d2d4614dd73f19c17cffeb
 #      revision: d5c2e71fa6fc479269668bc99e3ed9bb6112257d
 # OK      revision: 68c9caf740277d08aae895246679c3f2cd1a76e2
-      revision: c2d0717c46977a0bb628bf8d134008c29f07889e
+# OK      revision: c2d0717c46977a0bb628bf8d134008c29f07889e
+      revision: b54e0ba58fde513965d077f99c9f22125fe19d68
       import:
         # By using name-allowlist we can clone only the modules that are
         # strictly needed by the application.
