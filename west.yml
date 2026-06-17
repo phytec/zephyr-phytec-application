@@ -35,8 +35,9 @@ manifest:
 # OK      revision: 92382add7102a5d48641e95fcdfd754235b2533b
 # OK      revision: a64883ef5dffc7592380a1954e009533003aa003
 # OK      revision: 07f5e1488f221a31f145406b5ee53e3cbc9b5620	    boards: amd: acp_6_0: update defconfig for ACP 6.0
-      revision: 080b4f48fbff536a4804bec0bfb7729f88afee38
-# FAIL      revision: 23748dd517e66e52d267a4cf67f08d46e638f389
+# OK      revision: 080b4f48fbff536a4804bec0bfb7729f88afee38    drivers: nrf_wifi: Fix double counting for raw TX
+     revision: 93c8a238eecd06e600329c2dd4bfb8f124e2409b 
+# FAIL      revision: 23748dd517e66e52d267a4cf67f08d46e638f389    drivers: ethernet: phy: vsc8541: added interrupt mode support
 # FAIL      revision: 415fe9e0abf46fcd631eaf9f6bf90f151d50d60a     tests: dma: add frdm_rw612 board support for DMA tests
 # FAIL      revision: e3672da9b3bd4516dd38b3bd2e2a252bada9ce60	    samples: boards: nordic: Add sample using shell and STM logging
 # FAIL      revision: 8d2b1e308b229087935bccad7b5169f23c96071f
