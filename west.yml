@@ -35,7 +35,8 @@ manifest:
 # OK      revision: 92382add7102a5d48641e95fcdfd754235b2533b
 # OK      revision: a64883ef5dffc7592380a1954e009533003aa003
 # OK      revision: 07f5e1488f221a31f145406b5ee53e3cbc9b5620
-      revision: 8d2b1e308b229087935bccad7b5169f23c96071f
+      revision: e3672da9b3bd4516dd38b3bd2e2a252bada9ce60
+# FAIL      revision: 8d2b1e308b229087935bccad7b5169f23c96071f
 # FAIL      revision: 4d5f470290ae8918daeb7602112944c75c162ca9
 # FAIL      revision: 74f1077a70adf7c6e1d2c4e456443fc7de789807
       import:
