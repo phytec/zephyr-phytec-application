@@ -12,6 +12,10 @@
 	};
 };
 
+&ext_flash_ctrl {
+	status = "disabled";
+};
+
 /delete-node/ &zephyr_udc0;
 
 zephyr_udc0: &usb2 {
