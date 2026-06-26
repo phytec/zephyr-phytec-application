@@ -62,7 +62,7 @@ command:
 
 ```shell
 # initialize my-workspace for the example-application (main branch)
-west init -m https://github.com/phytec/zephyr-phytec-application --mr v4.1.0-phy1 my-workspace
+west init -m https://github.com/phytec/zephyr-phytec-application --mr v4.4.0-phy1 my-workspace
 # update Zephyr modules
 cd my-workspace
 west update
