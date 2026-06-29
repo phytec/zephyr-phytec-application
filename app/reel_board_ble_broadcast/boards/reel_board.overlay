@@ -1,0 +1,17 @@
+/*
+ * SPDX-FileCopyrightText: 2026 PHYTEC Messtechnik GmbH
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * Drive the SSD16xx e-paper over the EasyDMA-based "nordic,nrf-spim" instead of
+ * the board-default interrupt-per-byte "nordic,nrf-spi". With DMA the whole
+ * frame is transferred with a single completion interrupt, so a refresh no
+ * longer hogs the CPU and can run concurrently with BLE advertising/scanning
+ * without delaying the controller's radio-event prepare. This keeps the radio
+ * always on (no pause around refresh) for low-latency color sync.
+ *
+ */
+
+&spi1 {
+	compatible = "nordic,nrf-spim";
+};

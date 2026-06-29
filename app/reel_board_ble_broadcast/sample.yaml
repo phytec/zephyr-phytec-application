@@ -1,0 +1,21 @@
+sample:
+  description: Connectionless BLE color synchronization between reel boards plus an
+    e-paper sensor dashboard
+  name: reel_board BLE color sync
+common:
+  tags:
+    - samples
+    - bluetooth
+    - sensor
+    - display
+  depends_on:
+    - bluetooth
+    - i2c
+    - display
+tests:
+  sample.boards.reel_board.ble_broadcast:
+    platform_allow: reel_board
+    build_only: true
+    tags:
+      - bluetooth
+      - sensor
